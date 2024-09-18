@@ -1,0 +1,232 @@
+object formOntrackMain: TformOntrackMain
+  Left = 0
+  Top = 0
+  Caption = 'OnTrack'
+  ClientHeight = 567
+  ClientWidth = 502
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object HeaderToolBar: TToolBar
+    Anchors = []
+    Size.Width = 502.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBarLabel: TLabel
+      Align = Contents
+      Size.Width = 502.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'On Track'
+    end
+  end
+  object V: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 502.000000000000000000
+    Size.Height = 519.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      502s
+      470s
+      502s
+      470s)
+    object tiSettings: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 250.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemtoprated'
+      TabOrder = 0
+      Text = 'Settings'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object edClassName: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 0
+        Position.X = 104.000000000000000000
+        Position.Y = 20.000000000000000000
+        Size.Width = 377.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          ':00 Intro'
+          ':10 Part 1'
+          ':20 Part 2'
+          ''
+          'Times are number of minutes past start time')
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.X = 24.000000000000000000
+        Position.Y = 105.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 336.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 445.000000000000000000
+        Viewport.Height = 332.000000000000000000
+      end
+      object TimeEdit1: TTimeEdit
+        Time = 0.229707812500000000
+        Position.X = 96.000000000000000000
+        Position.Y = 50.000000000000000000
+        TabOrder = 2
+      end
+      object Label1: TLabel
+        Position.X = 24.000000000000000000
+        Position.Y = 23.000000000000000000
+        Size.Width = 72.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Trimming = None
+        Text = 'Class Name'
+        TabOrder = 5
+      end
+      object Label2: TLabel
+        Position.X = 24.000000000000000000
+        Position.Y = 53.000000000000000000
+        Size.Width = 64.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Trimming = None
+        Text = 'Start Time'
+        TabOrder = 4
+      end
+      object Label3: TLabel
+        Position.X = 24.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 212.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Trimming = None
+        Text = 'Outline (:StartTime Description)'
+        TabOrder = 3
+      end
+    end
+    object tiClass: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 250.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcontacts'
+      TabOrder = 0
+      Text = 'Class'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Button1: TButton
+        Position.X = 214.000000000000000000
+        Position.Y = 52.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'pausetoolbuttonbordered'
+        TabOrder = 0
+        Text = 'Button1'
+        TextSettings.Trimming = None
+      end
+      object Button2: TButton
+        Position.X = 169.000000000000000000
+        Position.Y = 52.000000000000000000
+        Size.Width = 37.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'playtoolbuttonbordered'
+        TabOrder = 1
+        Text = 'Button1'
+        TextSettings.Trimming = None
+      end
+      object lblTimer: TLabel
+        AutoSize = True
+        StyledSettings = [FontColor]
+        Position.X = 16.000000000000000000
+        Position.Y = 35.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Consolas'
+        TextSettings.Font.Size = 48.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        Text = '00:00'
+        TabOrder = 2
+      end
+      object lblPrevious: TLabel
+        Anchors = [akLeft, akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 16.000000000000000000
+        Position.Y = 110.000000000000000000
+        Size.Width = 465.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Trimming = None
+        Text = ':05 Intro'
+        TabOrder = 5
+      end
+      object lblNext: TLabel
+        Anchors = [akLeft, akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 16.000000000000000000
+        Position.Y = 169.000000000000000000
+        Size.Width = 465.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Trimming = None
+        Text = ':10 Do This Stuff'
+        TabOrder = 4
+      end
+      object lblCurrent: TLabel
+        Anchors = [akLeft, akTop, akRight]
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 16.000000000000000000
+        Position.Y = 216.000000000000000000
+        Size.Width = 465.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Trimming = None
+        Text = ':15 Upcoming Stuff'
+        TabOrder = 3
+      end
+    end
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 352
+    Top = 56
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end
