@@ -218,60 +218,6 @@ object formOntrackMain: TformOntrackMain
           TabOrder = 4
         end
       end
-      object lblPrevious: TLabel
-        Anchors = [akLeft, akTop, akRight]
-        StyledSettings = [Family, Style]
-        Position.X = 16.000000000000000000
-        Position.Y = 118.000000000000000000
-        Size.Width = 562.000000000000000000
-        Size.Height = 35.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Size = 22.000000000000000000
-        TextSettings.FontColor = claDimgray
-        TextSettings.Trimming = None
-        Text = ':05 Intro'
-        TabOrder = 6
-      end
-      object lblCurrent: TLabel
-        Anchors = [akLeft, akTop, akRight]
-        StyledSettings = [Family, Style]
-        HitTest = True
-        Position.X = 16.000000000000000000
-        Position.Y = 169.000000000000000000
-        Size.Width = 562.000000000000000000
-        Size.Height = 35.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Size = 35.000000000000000000
-        TextSettings.FontColor = claWhite
-        TextSettings.Trimming = None
-        Text = ':10 Do This Stuff'
-        TabOrder = 5
-        OnClick = lblCurrentClick
-        object ColorAnimation1: TColorAnimation
-          AnimationType = InOut
-          AutoReverse = True
-          Duration = 1.000000000000000000
-          Loop = True
-          PropertyName = 'FontColor'
-          StartValue = claWhite
-          StartFromCurrent = True
-          StopValue = claRed
-        end
-      end
-      object lblUpcoming: TLabel
-        Anchors = [akLeft, akTop, akRight]
-        StyledSettings = [Family, Style]
-        Position.X = 16.000000000000000000
-        Position.Y = 224.000000000000000000
-        Size.Width = 562.000000000000000000
-        Size.Height = 35.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Size = 22.000000000000000000
-        TextSettings.FontColor = claDimgray
-        TextSettings.Trimming = None
-        Text = ':15 Upcoming Stuff'
-        TabOrder = 4
-      end
       object btnCancel: TButton
         Position.X = 398.000000000000000000
         Position.Y = 46.000000000000000000
@@ -284,23 +230,123 @@ object formOntrackMain: TformOntrackMain
         TextSettings.Trimming = None
         OnClick = btnCancelClick
       end
-      object gbStudentPicker: TGroupBox
+      object gbStudents: TGroupBox
         Position.X = 16.000000000000000000
-        Position.Y = 287.000000000000000000
+        Position.Y = 249.000000000000000000
         Size.Width = 562.000000000000000000
-        Size.Height = 210.000000000000000000
+        Size.Height = 264.000000000000000000
         Size.PlatformDefault = False
-        Text = 'Random Student'
-        TabOrder = 7
-        OnClick = gbStudentPickerClick
+        Text = 'Students'
+        TabOrder = 4
         object lblStudent: TLabel
-          Position.X = 16.000000000000000000
-          Position.Y = 32.000000000000000000
-          Size.Width = 529.000000000000000000
-          Size.Height = 17.000000000000000000
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          HitTest = True
+          Margins.Left = 15.000000000000000000
+          Margins.Top = 15.000000000000000000
+          Margins.Right = 15.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 15.000000000000000000
+          Position.Y = 15.000000000000000000
+          Size.Width = 532.000000000000000000
+          Size.Height = 42.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Size = 33.000000000000000000
           TextSettings.Trimming = None
+          Text = 'x'
           TabOrder = 38
+          OnClick = lblStudentClick
+        end
+        object lbStudents: TListBox
+          Align = Client
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 552.000000000000000000
+          Size.Height = 192.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 39
+          OnDblClick = lbStudentsDblClick
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 548.000000000000000000
+          Viewport.Height = 188.000000000000000000
+        end
+      end
+      object layoutAgenda: TLayout
+        Anchors = [akLeft, akTop, akRight]
+        Position.X = 16.000000000000000000
+        Position.Y = 100.000000000000000000
+        Size.Width = 562.000000000000000000
+        Size.Height = 145.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object lblCurrent: TLabel
+          Align = Client
+          StyledSettings = [Family, Style]
+          HitTest = True
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 552.000000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 35.000000000000000000
+          TextSettings.FontColor = claWhite
+          TextSettings.Trimming = None
+          Text = ':10 Do This Stuff'
+          TabOrder = 5
+          OnClick = lblCurrentClick
+          object ColorAnimation1: TColorAnimation
+            AnimationType = InOut
+            AutoReverse = True
+            Duration = 1.000000000000000000
+            Loop = True
+            PropertyName = 'FontColor'
+            StartValue = claWhite
+            StartFromCurrent = True
+            StopValue = claRed
+          end
+        end
+        object lblPrevious: TLabel
+          Align = Top
+          StyledSettings = [Family, Style]
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 552.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 22.000000000000000000
+          TextSettings.FontColor = claDimgray
+          TextSettings.Trimming = None
+          Text = ':05 Intro'
+          TabOrder = 6
+        end
+        object lblUpcoming: TLabel
+          Align = Bottom
+          StyledSettings = [Family, Style]
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 105.000000000000000000
+          Size.Width = 552.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 22.000000000000000000
+          TextSettings.FontColor = claDimgray
+          TextSettings.Trimming = None
+          Text = ':15 Upcoming Stuff'
+          TabOrder = 4
         end
       end
     end
