@@ -3,7 +3,8 @@ program OnTrack;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  OnTrackMain in 'OnTrackMain.pas' {formOntrackMain};
+  OnTrackMain in 'OnTrackMain.pas' {formOntrackMain},
+  OnTrackClasses in 'OnTrackClasses.pas';
 
 {$R *.res}
 
